@@ -1,0 +1,20 @@
+--Creacion Base Datos
+
+docker run --name postgres-docker-final -p 6543:5432  -v /docker-storage/postgres/data:/var/lib/postgresql/data  -v /docker-storage/postgres/conf.d:  -e POSTGRES_PASSWORD=postgres -d postgres
+
+
+
+
+--Levantar docker service
+docker start postgres-docker-final
+
+--Bajar docker service
+docker stop postgres-docker-final
+
+
+--Revisar Estatus
+docker ps
+
+
+
+
